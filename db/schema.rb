@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_17_020633) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_17_022049) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,6 +18,43 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_17_020633) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.string "ethnic_origin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "markets", force: :cascade do |t|
+    t.string "address"
+    t.bigint "category_id", null: false
+    t.string "name"
+    t.string "description"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_markets_on_category_id"
+    t.index ["user_id"], name: "index_markets_on_user_id"
+  end
+
+  create_table "markets_ingredients", force: :cascade do |t|
+    t.bigint "ingredient_id", null: false
+    t.bigint "market_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ingredient_id"], name: "index_markets_ingredients_on_ingredient_id"
+    t.index ["market_id"], name: "index_markets_ingredients_on_market_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "market_id", null: false
+    t.string "comment"
+    t.integer "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["market_id"], name: "index_reviews_on_market_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,4 +70,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_17_020633) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "markets", "categories"
+  add_foreign_key "markets", "users"
+  add_foreign_key "markets_ingredients", "ingredients"
+  add_foreign_key "markets_ingredients", "markets"
+  add_foreign_key "reviews", "markets"
 end
