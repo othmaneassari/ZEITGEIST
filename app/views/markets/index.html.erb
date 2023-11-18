@@ -1,0 +1,18 @@
+<h1> Markets with a @category.name origin </h1>
+<div class= "container" >
+  <div class = "cards my-3" >
+    <% @markets. each do |m| %>
+
+    <% = link_to market_path(m) do  %>
+      <div class = "card-trip">
+    <% image_tag market.category.image_url%>
+    <div class= "card-trip-info">
+      <%= m.market.name%>
+      <%= m.market.category %>
+      <%= m.market.address%>
+      <%= m.market.description%>
+      </div>
+    </div>
+    </div>
+  <%end%>
+<%end%>
