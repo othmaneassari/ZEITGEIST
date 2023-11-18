@@ -6,11 +6,11 @@ class MarketsController < ApplicationController
   end
 
   def show
-    @market = market.find(params[:id])
+    @market = Market.find(params[:id])
   end
 
   def new
-    @market = market.new
+    @market = Market.new
   end
 
   def create
@@ -19,10 +19,11 @@ class MarketsController < ApplicationController
     @market.save
     redirect_to market_path(@market)
   end
-end
 
-private
 
-def game_params
-  params.require(:market).permit(:address, :category, :name, :description )
+  private
+
+  def market_params
+    params.require(:market).permit(:address, :category, :name, :description, :image_url)
+  end
 end
