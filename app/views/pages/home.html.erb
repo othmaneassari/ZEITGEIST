@@ -1,2 +1,106 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="background"></div>
+<main>
+
+
+
+
+<div class="main-contain">
+<h1>Welcome to ZeitGeist</h1>
+
+<p>Search for open air markets in Berlin, Germany.
+
+
+<div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: categories_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search for a market"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
+<ol class="card-list">
+<li>
+<div class="card">
+<div class="img-container">
+<img src="roman-kraft-Mvz8Xfy3TPU-unsplash.jpg" width="720" height="720" alt="Profile">
+</div>
+<h3>Chicken Market</h3>
+<p>The best rated one.
+</div>
+
+<li>
+<div class="card">
+<div class="img-container">
+<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
+</div>
+<h3>Bear Market</h3>
+<p>The best rated one.
+</div>
+
+<li>
+<div class="card">
+<div class="img-container">
+<img src="roman-kraft-Mvz8Xfy3TPU-unsplash.jpg" width="720" height="720" alt="Profile">
+</div>
+<h3>Chicken Market</h3>
+<p>The best rated one.
+</div>
+
+<li>
+<div class="card">
+<div class="img-container">
+<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
+</div>
+<h3>Bear Market</h3>
+<p>The best rated one.
+</div>
+
+<li>
+<div class="card">
+<div class="img-container">
+<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
+</div>
+<h3>Bear Market</h3>
+<p>The best rated one.
+</div>
+
+<li>
+<div class="card">
+<div class="img-container">
+<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
+</div>
+<h3>Bear Market</h3>
+<p>The best rated one.
+</div>
+
+<li>
+<div class="card">
+<div class="img-container">
+<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
+</div>
+<h3>Bear Market</h3>
+<p>The best rated one.
+</div>
+
+<li>
+<div class="card">
+<div class="img-container">
+<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
+</div>
+<h3>Bear Market</h3>
+<p>The best rated one.
+</div>
+
+</ol>
+
+
+
+
+</div>
+</main>
