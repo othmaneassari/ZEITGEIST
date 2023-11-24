@@ -6,20 +6,16 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
-searchbar
 Market.destroy_all
 Category.destroy_all
 User.destroy_all
 
- b19c8f0bf4bee7a8aa37f7c2f2848a543793579e
- master
 user = User.new(
   email: Faker::Internet.email,
   password: Faker::Internet.password
 )
 user.save!
 
- b19c8f0bf4bee7a8aa37f7c2f2848a543793579e
 moroccan_category = Category.new(
   name: "moroccan"
 )
@@ -36,10 +32,10 @@ thai_category = Category.new(
 )
 thai_category.save!
 
-Veitnamese_category = Category.new(
+vietnamese_category = Category.new(
   name: "vietnamese"
 )
-veitnamese_category.save!
+vietnamese_category.save!
 
 street_category = Category.new(
   name: "street"
@@ -51,7 +47,7 @@ market = Market.new(
   address: "Eberswalder Str., 13355 Berlin Germany",
   description: "Moroccan food, rice, fresh friut, Moroccan delicacies",
   category: moroccan_category,
-  image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/83/60/3d/pix.jpg?w=900&h=500&s=1",
+  #image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/83/60/3d/pix.jpg?w=900&h=500&s=1",
   user: user
 )
 market.save!
@@ -61,7 +57,7 @@ market = Market.new(
   address: "Maybachufer canal, Berlin Germany",
   description: "pungent spices, köfte, hummus, pillowvy breads",
   category: turkish_category,
-  image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/bmj9t0.webp",
+  #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/bmj9t0.webp",
   user: user
 )
 market.save!
@@ -71,7 +67,7 @@ market = Market.new(
   address: "Wilmersdorf, Berlin Germany",
   description: "street-food, fresh fruit,  bread, vegtables",
   category: thai_category,
-  image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
+  #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
   user: user
 )
 market.save!
@@ -80,8 +76,8 @@ market = Market.new(
   name: "Veitnamese",
   address: "Eberswalder Str., 13355 Berlin Germany",
   description: "bánh xèo coconut pancakes, seeds, herbs, Toctoc, tofu",
-  category: veitnamese_category,
-  image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/w2fcfg.webp",
+  category: vietnamese_category,
+  #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/w2fcfg.webp",
   user: user
 )
 market.save!
@@ -91,7 +87,7 @@ market = Market.new(
   address: "Prenalauer Berg, Berlin Germany",
   description: "street food, bratwurst, curry-wurst, pretzles, tacos",
   category: street_category,
-  image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2015/03/09/berlin-street-food-auf-achse-kulturbrauerei_fish_art_betreiber_02_800x400.jpg?itok=Dmi6rzLK",
+  #image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2015/03/09/berlin-street-food-auf-achse-kulturbrauerei_fish_art_betreiber_02_800x400.jpg?itok=Dmi6rzLK",
   user: user
 )
 market.save!
@@ -101,7 +97,7 @@ market = Market.new(
   address: "Spree, Berlin Germany",
   description: "street food, bratwurst, curry-wurst, pretzles, tacos",
   category: street_category,
-  image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2015/05/18/bite_club_street_food_berlin-dpa.jpg?itok=-7ShEXX1",
+  #image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2015/05/18/bite_club_street_food_berlin-dpa.jpg?itok=-7ShEXX1",
   user: user
 )
 market.save!
@@ -111,15 +107,16 @@ market = Market.new(
   address: "Preußenpark, Berlin Germany",
   description: "Asian street food",
   category: thai_category,
-  image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
-
+  #image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
+  user: user
+)
+market.save!
 market = Market.new(
   name: "Mauerpark",
   address: "Eberswalder Str., 13355 Berlin Germany",
   description: "moroccan cuisine, rice",
   category: moroccan_category,
   # image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/83/60/3d/pix.jpg?w=900&h=500&s=1",
- b19c8f0bf4bee7a8aa37f7c2f2848a543793579e
   user: user
 )
 market.save!
