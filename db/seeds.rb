@@ -6,16 +6,24 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
+<<<<<<< HEAD
+=======
+
+>>>>>>> b19c8f0bf4bee7a8aa37f7c2f2848a543793579e
 user = User.new(
   email: Faker::Internet.email,
   password: Faker::Internet.password
 )
 user.save!
+<<<<<<< HEAD
 
+=======
+>>>>>>> b19c8f0bf4bee7a8aa37f7c2f2848a543793579e
 moroccan_category = Category.new(
   name: "moroccan"
 )
 moroccan_category.save!
+<<<<<<< HEAD
 
 turkish_category = Category.new(
   name: "turkish"
@@ -103,6 +111,14 @@ market = Market.new(
   description: "Asian street food",
   category: thai_category,
   image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
+=======
+market = Market.new(
+  name: "Mauerpark",
+  address: "Eberswalder Str., 13355 Berlin Germany",
+  description: "iranian cuisine, rice",
+  category: moroccan_category,
+  # image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/83/60/3d/pix.jpg?w=900&h=500&s=1",
+>>>>>>> b19c8f0bf4bee7a8aa37f7c2f2848a543793579e
   user: user
 )
 market.save!

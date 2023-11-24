@@ -3,8 +3,16 @@ class MarketsController < ApplicationController
 
   def index
     @markets = Market.all
+    @markets = Market.all
+    if params[:query].present?
+      sql_subquery = <<~SQL
+        categories.name @@ :query
+        OR markets.name @@ :query
+        OR markets.description @@ :query
+      SQL
+      @markets = @markets.joins(:categories).where(sql_subquery, query: params[:query])
+    end
   end
-
 
 
   def show
