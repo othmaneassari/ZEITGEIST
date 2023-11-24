@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :markets
+  has_many :markets, dependent: :destroy
 end

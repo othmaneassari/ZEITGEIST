@@ -10,10 +10,9 @@ class MarketsController < ApplicationController
         OR markets.name @@ :query
         OR markets.description @@ :query
       SQL
-      @markets = @markets.joins(:categories).where(sql_subquery, query: params[:query])
+      @markets = @markets.joins(:category).where(sql_subquery, query: params[:query])
     end
   end
-
 
   def show
     @market = Market.find(params[:id])
