@@ -25,77 +25,17 @@
 
 
 <ol class="card-list">
-<li>
-<div class="card">
-<div class="img-container">
-<img src="roman-kraft-Mvz8Xfy3TPU-unsplash.jpg" width="720" height="720" alt="Profile">
-</div>
-<h3>Chicken Market</h3>
-<p>The best rated one.
-</div>
-
-<li>
-<div class="card">
-<div class="img-container">
-<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
-</div>
-<h3>Bear Market</h3>
-<p>The best rated one.
-</div>
-
-<li>
-<div class="card">
-<div class="img-container">
-<img src="roman-kraft-Mvz8Xfy3TPU-unsplash.jpg" width="720" height="720" alt="Profile">
-</div>
-<h3>Chicken Market</h3>
-<p>The best rated one.
-</div>
-
-<li>
-<div class="card">
-<div class="img-container">
-<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
-</div>
-<h3>Bear Market</h3>
-<p>The best rated one.
-</div>
-
-<li>
-<div class="card">
-<div class="img-container">
-<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
-</div>
-<h3>Bear Market</h3>
-<p>The best rated one.
-</div>
-
-<li>
-<div class="card">
-<div class="img-container">
-<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
-</div>
-<h3>Bear Market</h3>
-<p>The best rated one.
-</div>
-
-<li>
-<div class="card">
-<div class="img-container">
-<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
-</div>
-<h3>Bear Market</h3>
-<p>The best rated one.
-</div>
-
-<li>
-<div class="card">
-<div class="img-container">
-<img src="roman-kraft-4mx1y3Z3-Ys-unsplash.jpg" width="720" height="720" alt="Profile">
-</div>
-<h3>Bear Market</h3>
-<p>The best rated one.
-</div>
+  <% @markets.each do |market| %>
+    <li>
+      <div class="card">
+        <div class="img-container">
+          <img src="" width="720" height="720" alt="Profile">
+        </div>
+        <h3><%= market.name %></h3>
+        <p><%= market.description %></p>
+      </div>
+    </li>
+  <% end %>
 
 </ol>
 

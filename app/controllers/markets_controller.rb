@@ -16,6 +16,7 @@ class MarketsController < ApplicationController
 
   def show
     @market = Market.find(params[:id])
+    @marker = [{ lat: @market.latitude, lng: @market.longitude }]
   end
 
   def new
