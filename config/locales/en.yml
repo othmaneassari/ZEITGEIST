@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+
+MAPBOX_API_KEY=pk.eyJ1IjoiZGFubnl0b2RkMTIzIiwiYSI6ImNscGVscGhnaTE3MTEyamt4dDViZjljeDEifQ.WSRVRExwc0WAsIcERQMBMA
