@@ -74,7 +74,7 @@ market.save!
 
 market = Market.new(
   name: "Street food",
-  address: "Prenalauer Berg, Berlin Germany",
+  address: "Prenzlauer Berg, Berlin Germany",
   description: "street food, bratwurst, curry-wurst, pretzles, tacos",
   category: street_category,
   #image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2015/03/09/berlin-street-food-auf-achse-kulturbrauerei_fish_art_betreiber_02_800x400.jpg?itok=Dmi6rzLK",
