@@ -1,0 +1,29 @@
+
+.mapboxgl-popup {
+  max-width: 200px;
+  width: 297px;
+  height: 327px;
+  flex-shrink: 0;
+  border-radius: 18px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+
+.text_color {
+  color: black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 300px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.80);
+}

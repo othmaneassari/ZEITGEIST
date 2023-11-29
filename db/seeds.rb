@@ -6,21 +6,15 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
-Market.destroy_all
-Category.destroy_all
-User.destroy_all
-
 user = User.new(
   email: Faker::Internet.email,
   password: Faker::Internet.password
 )
 user.save!
-
 moroccan_category = Category.new(
   name: "moroccan"
 )
 moroccan_category.save!
-
 
 turkish_category = Category.new(
   name: "turkish"
@@ -54,7 +48,7 @@ market.save!
 
 market = Market.new(
   name: "Turkish Market",
-  address: "Maybachufer canal, Berlin Germany",
+  address: "Maybachufer, Berlin Germany",
   description: "pungent spices, köfte, hummus, pillowvy breads",
   category: turkish_category,
   #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/bmj9t0.webp",
@@ -107,16 +101,7 @@ market = Market.new(
   address: "Preußenpark, Berlin Germany",
   description: "Asian street food",
   category: thai_category,
-  #image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
-  user: user
-)
-market.save!
-market = Market.new(
-  name: "Mauerpark",
-  address: "Eberswalder Str., 13355 Berlin Germany",
-  description: "moroccan cuisine, rice",
-  category: moroccan_category,
-  # image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/83/60/3d/pix.jpg?w=900&h=500&s=1",
+  # image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
   user: user
 )
 market.save!
