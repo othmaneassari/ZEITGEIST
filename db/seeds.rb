@@ -15,6 +15,10 @@ moroccan_category = Category.new(
   name: "moroccan"
 )
 moroccan_category.save!
+
+turkish_category = Category.new(
+  name: "turkish"
+)
 turkish_category.save!
 
 thai_category = Category.new(
@@ -44,7 +48,7 @@ market.save!
 
 market = Market.new(
   name: "Turkish Market",
-  address: "Maybachufer canal, Berlin Germany",
+  address: "Maybachufer, Berlin Germany",
   description: "pungent spices, köfte, hummus, pillowvy breads",
   category: turkish_category,
   #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/bmj9t0.webp",
@@ -97,7 +101,7 @@ market = Market.new(
   address: "Preußenpark, Berlin Germany",
   description: "Asian street food",
   category: thai_category,
-  image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
+  # image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
   user: user
 )
 market.save!

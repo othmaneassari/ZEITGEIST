@@ -4,7 +4,9 @@ class PagesController < ApplicationController
   def home
     @markets = Market.all
     @markers = @markets.map do |market|
-      { lat: market.latitude, lng: market.longitude }
+      { lat: market.latitude, lng: market.longitude,
+      info_window_html: render_to_string(partial: "info_window", locals: {market: market}) }
+
     end
   end
 end
