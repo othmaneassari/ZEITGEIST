@@ -149,9 +149,21 @@ html {
       overflow: hidden;
     }
 
+  .col-sm-8 {
+    width: 85%;
+  }
 
-    main {overflow:auto;}
-  footer {background:#000;color:#fff;text-align:center;overflow:auto;}
+  .mapboxgl-canvas {
+    width: 900px;
+  }
+
+  .map {
+    justify-content: center;
+  }
+
+
+
+  footer {background:#000;color:#fff;text-align:center;}
   footer p {margin:1em 1rem;}
 
 
