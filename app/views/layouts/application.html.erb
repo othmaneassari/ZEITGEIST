@@ -8,14 +8,24 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Philosopher&display=swap" rel="stylesheet">
 
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-<%= render "shared/flashes" %>
 
-    <%= yield %>
-    <%= render "shared/navbar" %>
+
+
+    <div class="background">
+      <%#= image_tag "https://mail.google.com/mail/u/0?ui=2&ik=606b91ab48&attid=0.1&permmsgid=msg-f:1784035278970553629&th=18c22aa24dce051d&view=att&disp=safe&realattid=f_lpluuhjc0" %>
+
+      <%= render "shared/flashes" %>
+
+      <%= yield %>
+      <%= render "shared/navbar" %>
+    </div>
   </body>
 </html>

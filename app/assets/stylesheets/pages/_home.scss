@@ -12,10 +12,25 @@
 //   color: rgba(240,240,240,.65)
 // }
 
+
+.background{
+  background-image: url(https://mail.google.com/mail/u/0?ui=2&ik=606b91ab48&attid=0.1&permmsgid=msg-f:1784035278970553629&th=18c22aa24dce051d&view=att&disp=safe&realattid=f_lpluuhjc0);
+}
+
 html {
   overflow-y:scroll;
   scroll-behavior:smooth;
   font-size:16px;
+  }
+
+.slogan {
+  font-family: inter;
+  color: rgb(179, 179, 202);
+
+}
+  .home_title {
+    font-family: inter;
+    color: rgb(179, 179, 202);
   }
 
   body {
@@ -23,7 +38,7 @@ html {
   padding:0;
   background:#000;
   color:#fff;
-  font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-family: inter;
   font-weight:400;
   line-height:1;
   -moz-text-size-adjust:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;
@@ -112,7 +127,7 @@ html {
   .search button {box-shadow: 0.5em 0.5em 0.5em rgba(0,0,0,.15);
   background-color:#31485c;
   color:#eee;
-  font-family:inherit;
+  font-family:inter;
   }
 
   .search input {width:100%;border-radius: .25em 0 0 .25em;}
