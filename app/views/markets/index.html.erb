@@ -1,19 +1,17 @@
-<h1> Here are your results: </h1>
-<div class= "container" >
-  <div class = "cards my-3" >
+<div class="card" style="width: 80%;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
     <% @markets.each do |m| %>
+    <h5 class="card-title"> <%= m.name %></h5>
+    <p class="card-text"><strong> </strong><%= m.address %></p>
+    <a href="#" class="card-link">directions </a>
+  <% end %>
+  </div>
 
-      <%= link_to market_path(m) do  %>
-        <div class = "card-market">
-          <%# image_tag market.category.image_url%>
-          <div class= "card-market-info">
-            <%= m.name%>
-            <%= m.category.name %>
-            <%= m.address%>
-            <%= m.description%>
-          </div>
-        </div>
-      <%end%>
-    <%end%>
+  <ul class="list-group list-group-flush">
+    <% @markets.each do |m| %>
+    <li class="list-group-item"> <strong> Commonly sold: </strong> <%= m.description %></li>
+  </ul>
+    <% end %>
   </div>
 </div>

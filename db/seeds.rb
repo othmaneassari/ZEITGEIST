@@ -39,16 +39,23 @@ user_3 = User.new(
   description: "Teacher, writer, philanthropist",
   time_in_berlin: "2 years",
 )
+
 user_3.save!
+
+diverse_category = Category.new(
+  name: "diverse"
+)
+diverse_category.save!
+
+afghan_category = Category.new(
+  name: "afghan"
+)
+afghan_category.save!
+
 moroccan_category = Category.new(
   name: "moroccan"
 )
 moroccan_category.save!
-
-turkish_category = Category.new(
-  name: "turkish"
-)
-turkish_category.save!
 
 thai_category = Category.new(
   name: "thai"
@@ -133,4 +140,51 @@ market = Market.new(
   # image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
   user: user_1
 )
+market.save!
+
+
+market = Market.new(
+  name: "Weekly market Fehrbellinerplatz",
+  address: "Fehrbelliner Platz 4, 10707 Berlin, Germany",
+  description: "Local meals, Pizza, Currywurst, fresh vegtables, fruit, Turkish, Chinese, Mexican, German traditional food.",
+  category: diverse_category,
+  user: user
+)
+market.save!
+
+market = Market.new(
+  name: "Street Food auf Achse",
+  address: "Schönhauser Allee 38, 10435 Berlin, Germany",
+  description: "Sunday afternoon outdoor market showcasing rotating food trucks & street-food stands. Pie food truck, local deserts",
+  category: diverse_category,
+  user: user
+)
+market.save!
+
+market = Market.new(
+  name: "Weekly market at Wittenbergplatz",
+  address: "Wittenbergpl. 5, 10789 Berlin, Germany",
+  description: "cheese, sausages, fish, meat, bread, italian food, pasta, Turkish food vendor, vegtables, flowers",
+  category: diverse_category,
+  user: user
+  )
+market.save!
+
+market = Market.new(
+  name: "Donnerstags Bauermarkt",
+  address: "Hackescher Markt, 10178 Berlin, Germany",
+  description: "deserts, music, Indian food, ice-cream",
+  category: diverse_category,
+  user: user
+)
+market.save!
+
+
+market = Market.new(
+  name: "Kabul bazar کابل بازار",
+  address: "Vulkanstraße 12c, 10367 Berlin, Germany",
+  description: "All afghan products, delicacies, deserts, spices, rugs, furniture",
+  category: afghan_category,
+  user: user
+  )
 market.save!
