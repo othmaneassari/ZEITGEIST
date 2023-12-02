@@ -1,19 +1,15 @@
-<h1> Here are your results: </h1>
-<div class= "container" >
-  <div class = "cards my-3" >
-    <% @markets.each do |m| %>
 
-      <%= link_to market_path(m) do  %>
-        <div class = "card-market">
-          <%# image_tag market.category.image_url%>
-          <div class= "card-market-info">
-            <%= m.name%>
-            <%= m.category.name %>
-            <%= m.address%>
-            <%= m.description%>
-          </div>
-        </div>
-      <%end%>
-    <%end%>
+
+<div class="card mb-3" style="max-width: 500px;">
+  <div class="row no-gutters">
+    <div class="col-md-3-my-3">
+      <% @markets.each do |m| %>
+       <div class="card-body">
+        <h5 class="card-title"> <%= m.name %> </h5>
+        <p > <%= m.description%></p>
+        <p class="text-muted"> <%= m.address%> </p>
+      </div>
+    </div>
+     <%end%>
   </div>
 </div>
