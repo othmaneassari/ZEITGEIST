@@ -6,9 +6,16 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
-user = User.new(
-  email: Faker::Internet.email,
-  password: Faker::Internet.password
+User.destroy_all
+
+user_1 = User.new(
+  email: "Othmane.assari@lewagon.com",
+  password: "123456",
+  name: "Othmane",
+  picture_url: "c:\\Users\\Desktop\\Documents\\Images rigolotes xD#\\VSC pic\\2.jpg",
+  biography: "Hi, my name is Othmane, I am a culinary enthusiasm eager to discover what kind of dishes Berlin has to offer !",
+  description: "Developer in the making,Market Finance graduate",
+  time_in_berlin: "1 year",
 )
 user.save!
 
@@ -48,7 +55,7 @@ market = Market.new(
   description: "Moroccan food, rice, fresh friut, Moroccan delicacies",
   category: moroccan_category,
   #image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/83/60/3d/pix.jpg?w=900&h=500&s=1",
-  user: user
+  user: user_1
 )
 market.save!
 
@@ -59,7 +66,7 @@ market = Market.new(
   description: "street-food, fresh fruit,  bread, vegtables",
   category: thai_category,
   #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
-  user: user
+  user: user_3
 )
 market.save!
 
@@ -69,7 +76,7 @@ market = Market.new(
   description: "bánh xèo coconut pancakes, seeds, herbs, Toctoc, tofu",
   category: vietnamese_category,
   #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/w2fcfg.webp",
-  user: user
+  user: user_1
 )
 market.save!
 
@@ -79,7 +86,7 @@ market = Market.new(
   description: "street food, bratwurst, curry-wurst, pretzles, tacos",
   category: street_category,
   #image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2015/03/09/berlin-street-food-auf-achse-kulturbrauerei_fish_art_betreiber_02_800x400.jpg?itok=Dmi6rzLK",
-  user: user
+  user: user_2
 )
 market.save!
 
@@ -89,7 +96,7 @@ market = Market.new(
   description: "street food, bratwurst, curry-wurst, pretzles, tacos",
   category: street_category,
   #image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2015/05/18/bite_club_street_food_berlin-dpa.jpg?itok=-7ShEXX1",
-  user: user
+  user: user_3
 )
 market.save!
 
@@ -99,7 +106,7 @@ market = Market.new(
   description: "Asian street food",
   category: thai_category,
   # image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
-  user: user
+  user: user_1
 )
 market.save!
 

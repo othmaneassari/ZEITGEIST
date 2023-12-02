@@ -11,8 +11,16 @@
     <i class="fa-solid fa-plus"></i>
   </div>
   <div>
+<<<<<<< HEAD
     <%# <% link_to user_path , class: "nav-link" do %>
     <i class="fa-solid fa-user"></i>
+=======
+  <% if user_signed_in?%>
+    <%= link_to user_path(current_user) , class: "nav-link" do %>
+      <i class="fa-solid fa-user"></i>
+    <%end%>
+  <%end%>
+>>>>>>> origin
   </div>
 </div>
 
