@@ -1,15 +1,16 @@
+<div class="card" style="width: 80%;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <% @markets.each do |m| %>
+    <h5 class="card-title"> <%= m.name %></h5>
+    <p class="card-text"> <%= m.address %></p>
+  <% end %>
+  </div>
 
-
-<div class="card mb-3" style="max-width: 500px;">
-  <div class="row no-gutters">
-    <div class="col-md-3-my-3">
-      <% @markets.each do |m| %>
-       <div class="card-body">
-        <h5 class="card-title"> <%= m.name %> </h5>
-        <p > <%= m.description%></p>
-        <p class="text-muted"> <%= m.address%> </p>
-      </div>
-    </div>
-     <%end%>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> description </li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">directions </a>
   </div>
 </div>
