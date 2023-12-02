@@ -17,7 +17,30 @@ user_1 = User.new(
   description: "Developer in the making,Market Finance graduate",
   time_in_berlin: "1 year",
 )
-user.save!
+user_1.save!
+
+user_2 = User.new(
+  email: "Danny.todd@lewagon.com",
+  password: "123456",
+  name: "Danny",
+  picture_url: "c:\\Users\\Desktop\\Downloads\\y1bknqoddo1xnpssjwzm.jpg",
+  biography: "Hey, I'm Danny, and I love to explore new and interesting cultural dishes, but I don't like to pay premium prices. ZeitGeist is amazing!",
+  description: "Coder, Medical student at SJSM",
+  time_in_berlin: "4 years",
+)
+user_2.save!
+
+user_3 = User.new(
+  email: "Jana.tuscher@lewagon.com",
+  password: "123456",
+  name: "Jana",
+  picture_url: "c:\\Users\\Desktop\\Downloads\\y1bknqoddo1xnpssjwzm.jpg",
+  biography: "Berlin holds a special place in my heart ever since then I witnessed the fall of the wall, the food there is not bad also",
+  description: "Teacher, writer, philanthropist",
+  time_in_berlin: "2 years",
+)
+
+user_3.save!
 
 diverse_category = Category.new(
   name: "diverse"
@@ -60,6 +83,7 @@ market = Market.new(
 market.save!
 
 market.save!
+
 market = Market.new(
   name: "Thai Park",
   address: "Wilmersdorf, Berlin Germany",
