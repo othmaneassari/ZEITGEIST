@@ -11,15 +11,21 @@ user = User.new(
   password: Faker::Internet.password
 )
 user.save!
+
+diverse_category = Category.new(
+  name: "diverse"
+)
+diverse_category.save!
+
+afghan_category = Category.new(
+  name: "afghan"
+)
+afghan_category.save!
+
 moroccan_category = Category.new(
   name: "moroccan"
 )
 moroccan_category.save!
-
-# turkish_category = Category.new(
-#   name: "turkish"
-# )
-# turkish_category.save!
 
 thai_category = Category.new(
   name: "thai"
@@ -46,16 +52,7 @@ market = Market.new(
 )
 market.save!
 
-# market = Market.new(
-#   name: "Turkish Market",
-#   address: "Maybachufer, Berlin Germany",
-#   description: "pungent spices, köfte, hummus, pillowvy breads",
-#   category: turkish_category,
-#   #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/bmj9t0.webp",
-#   user: user
-# )
-# market.save!
-
+market.save!
 market = Market.new(
   name: "Thai Park",
   address: "Wilmersdorf, Berlin Germany",
@@ -104,4 +101,51 @@ market = Market.new(
   # image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
   user: user
 )
+market.save!
+
+
+market = Market.new(
+  name: "Weekly market Fehrbellinerplatz",
+  address: "Fehrbelliner Platz 4, 10707 Berlin, Germany",
+  description: "Local meals, Pizza, Currywurst, fresh vegtables, fruit, Turkish, Chinese, Mexican, German traditional food.",
+  category: diverse_category,
+  user: user
+)
+market.save!
+
+market = Market.new(
+  name: "Street Food auf Achse",
+  address: "Schönhauser Allee 38, 10435 Berlin, Germany",
+  description: "Sunday afternoon outdoor market showcasing rotating food trucks & street-food stands. Pie food truck, local deserts",
+  category: diverse_category,
+  user: user
+)
+market.save!
+
+market = Market.new(
+  name: "Weekly market at Wittenbergplatz",
+  address: "Wittenbergpl. 5, 10789 Berlin, Germany",
+  description: "cheese, sausages, fish, meat, bread, italian food, pasta, Turkish food vendor, vegtables, flowers",
+  category: diverse_category,
+  user: user
+  )
+market.save!
+
+market = Market.new(
+  name: "Donnerstags Bauermarkt",
+  address: "Hackescher Markt, 10178 Berlin, Germany",
+  description: "deserts, music, Indian food, ice-cream",
+  category: diverse_category,
+  user: user
+)
+market.save!
+
+
+market = Market.new(
+  name: "Kabul bazar کابل بازار",
+  address: "Vulkanstraße 12c, 10367 Berlin, Germany",
+  description: "All afghan products, delicacies, deserts, spices, rugs, furniture",
+  category: afghan_category,
+  user: user
+  )
 market.save!
