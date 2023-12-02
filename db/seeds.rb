@@ -16,10 +16,10 @@ moroccan_category = Category.new(
 )
 moroccan_category.save!
 
-turkish_category = Category.new(
-  name: "turkish"
-)
-turkish_category.save!
+# turkish_category = Category.new(
+#   name: "turkish"
+# )
+# turkish_category.save!
 
 thai_category = Category.new(
   name: "thai"
@@ -46,15 +46,15 @@ market = Market.new(
 )
 market.save!
 
-market = Market.new(
-  name: "Turkish Market",
-  address: "Maybachufer, Berlin Germany",
-  description: "pungent spices, köfte, hummus, pillowvy breads",
-  category: turkish_category,
-  #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/bmj9t0.webp",
-  user: user
-)
-market.save!
+# market = Market.new(
+#   name: "Turkish Market",
+#   address: "Maybachufer, Berlin Germany",
+#   description: "pungent spices, köfte, hummus, pillowvy breads",
+#   category: turkish_category,
+#   #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/bmj9t0.webp",
+#   user: user
+# )
+# market.save!
 
 market = Market.new(
   name: "Thai Park",

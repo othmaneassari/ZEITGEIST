@@ -8,6 +8,16 @@
   font-family: inter;
 }
 
+.mapboxgl {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+// .sizing {
+//   border-radius: 10px;
+// }
+
 .mapboxgl-popup-content {
   text-align: center;
   border-radius: 10px;
