@@ -1,7 +1,5 @@
 class ReviewsController < ApplicationController
 
-
-
 def new
   @review = Review.new
   @market = Market.find(params[:market_id])
