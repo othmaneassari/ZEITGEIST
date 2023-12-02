@@ -12,13 +12,13 @@
 
 <div class="row justify-content-center">
 
-  <h3 class="slogan"> Search Open Air Markets in Berlin </h3>
+  <h2 class="slogan"> For the love of Cultural diversity </h2>
     <div class="col-sm-8 my-3">
       <%= form_with url: markets_path, method: :get, class: "" do %>
         <%= text_field_tag :query,
               params[:query],
               class: "form-control",
-              placeholder: "Search for a market"
+              placeholder: "let's find an open air market in Berlin..."
           %>
     </div>
 
