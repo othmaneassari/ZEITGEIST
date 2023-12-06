@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :markets, dependent: :destroy
   # has_many :reviews, dependent: :destroy
   has_many :favorite_markets, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end
