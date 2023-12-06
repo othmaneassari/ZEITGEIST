@@ -1,11 +1,13 @@
 <div class="card" style="width: 80%;">
-  <img src="..." class="card-img-top" alt="...">
+  <class="card-img-top" alt="Markets">
   <div class="card-body">
+
     <% @markets.each do |m| %>
-    <h5 class="card-title"> <%= m.name %></h5>
-    <p class="card-text"><strong> </strong><%= m.address %></p>
-    <a href="#" class="card-link">directions </a>
-  <% end %>
+     <%= image_tag(m.image_url) %>
+      <h5 class="card-title"> <%= m.name %></h5>
+      <p class="card-text"><strong> </strong><%= m.address %></p>
+      <a href="#" class="card-link">directions </a>
+    <% end %>
   </div>
 
   <ul class="list-group list-group-flush">

@@ -77,7 +77,7 @@ market = Market.new(
   address: "Eberswalder Str., 13355 Berlin Germany",
   description: "Moroccan food, rice, fresh friut, Moroccan delicacies",
   category: moroccan_category,
-  #image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/83/60/3d/pix.jpg?w=900&h=500&s=1",
+  image_url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/25/fa/98/mauerpark.jpg?w=1200&h=1200&s=1",
   user: user_1
 )
 market.save!
@@ -89,7 +89,7 @@ market = Market.new(
   address: "Wilmersdorf, Berlin Germany",
   description: "street-food, fresh fruit,  bread, vegtables",
   category: thai_category,
-  #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
+  image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
   user: user_3
 )
 market.save!
@@ -99,7 +99,7 @@ market = Market.new(
   address: "Eberswalder Str., 13355 Berlin Germany",
   description: "bánh xèo coconut pancakes, seeds, herbs, Toctoc, tofu",
   category: vietnamese_category,
-  #image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/w2fcfg.webp",
+  image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
   user: user_1
 )
 market.save!
@@ -109,7 +109,7 @@ market = Market.new(
   address: "Prenzlauer Berg, Berlin Germany",
   description: "street food, bratwurst, curry-wurst, pretzles, tacos",
   category: street_category,
-  #image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2015/03/09/berlin-street-food-auf-achse-kulturbrauerei_fish_art_betreiber_02_800x400.jpg?itok=Dmi6rzLK",
+  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP2rZHyMK_k5InDD5s3zEQpK4f-4f54kiRsGBbpYXx5bCQZGVEVUfMPwAzawse_bCQJSE&usqp=CAU",
   user: user_2
 )
 market.save!
@@ -119,7 +119,7 @@ market = Market.new(
   address: "Spree, Berlin Germany",
   description: "street food, bratwurst, curry-wurst, pretzles, tacos",
   category: street_category,
-  #image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2015/05/18/bite_club_street_food_berlin-dpa.jpg?itok=-7ShEXX1",
+  image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
   user: user_3
 )
 market.save!
@@ -129,7 +129,7 @@ market = Market.new(
   address: "Preußenpark, Berlin Germany",
   description: "Asian street food",
   category: thai_category,
-  # image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
+  image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
   user: user_1
 )
 market.save!
@@ -139,8 +139,9 @@ market = Market.new(
   name: "Weekly market Fehrbellinerplatz",
   address: "Fehrbelliner Platz 4, 10707 Berlin, Germany",
   description: "Local meals, Pizza, Currywurst, fresh vegtables, fruit, Turkish, Chinese, Mexican, German traditional food.",
+  image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
   category: diverse_category,
-  user: user
+  user: user_1
 )
 market.save!
 
@@ -148,8 +149,9 @@ market = Market.new(
   name: "Street Food auf Achse",
   address: "Schönhauser Allee 38, 10435 Berlin, Germany",
   description: "Sunday afternoon outdoor market showcasing rotating food trucks & street-food stands. Pie food truck, local deserts",
+  image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2016/03/18/thaiwiese-preussenpark_dpa.jpg?itok=mF3DW4qm",
   category: diverse_category,
-  user: user
+  user: user_3
 )
 market.save!
 
@@ -157,17 +159,9 @@ market = Market.new(
   name: "Weekly market at Wittenbergplatz",
   address: "Wittenbergpl. 5, 10789 Berlin, Germany",
   description: "cheese, sausages, fish, meat, bread, italian food, pasta, Turkish food vendor, vegtables, flowers",
+  image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
   category: diverse_category,
-  user: user
-  )
-market.save!
-
-market = Market.new(
-  name: "Donnerstags Bauermarkt",
-  address: "Hackescher Markt, 10178 Berlin, Germany",
-  description: "deserts, music, Indian food, ice-cream",
-  category: diverse_category,
-  user: user
+  user: user_2
 )
 market.save!
 
@@ -176,7 +170,8 @@ market = Market.new(
   name: "Kabul bazar کابل بازار",
   address: "Vulkanstraße 12c, 10367 Berlin, Germany",
   description: "All afghan products, delicacies, deserts, spices, rugs, furniture",
+  image_url: "https://cdn-v2.theculturetrip.com/350x233/wp-content/uploads/2021/03/mxt8yt.webp",
   category: afghan_category,
-  user: user
+  user: user_1
   )
 market.save!
