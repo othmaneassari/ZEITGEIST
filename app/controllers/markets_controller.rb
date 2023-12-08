@@ -21,12 +21,19 @@ class MarketsController < ApplicationController
 
   def new
     @market = Market.new
+    @categories = Category.all
   end
 
   def create
-    @market = Market.new(market_params)
+    @market = Market.new(market_params.except(:category))
     @market.user = current_user
-    @market.save
+    #get the category that's coming from the form and assign that to a variable @category=Category.find
+    pp "params[:category]"
+    pp params[:category]
+    @category = Category.find(market_params[:category])
+    pp Category.find(market_params[:category])
+    @market.category = @category
+    @market.save!
     redirect_to market_path(@market)
   end
 

@@ -1,17 +1,17 @@
-<div class=“card” style=“width: 80%;“>
-  <class=“card-img-top” alt=“Markets”>
-  <div class=“card-body”>
-    <% @markets.each do |m| %>
-     <%= image_tag(m.image_url) %>
-      <h5 class=“card-title”> <%= m.name %></h5>
-      <p class=“card-text”><strong> </strong><%= m.address %></p>
-      <%= link_to "directions", "https://maps.google.com/maps?q=#{m.address}" %>
-    <% end %>
-  </div>
-  <ul class=“list-group list-group-flush”>
-    <% @markets.each do |m| %>
-    <li class=“list-group-item”> <strong> Commonly sold: </strong> <%= m.description %></li>
-  </ul>
-    <% end %>
+<div class="card" style=“width: 80%;“>
+  <div class="card-img-top" alt=“Markets”>
+    <div class=“card-body”>
+      <% @markets.each do |m| %>
+      <%= image_tag(m.image_url) %>
+        <h5 class=“card-title”> <%= m.name %></h5>
+        <p class=“card-text”><strong> </strong><%= m.address %></p>
+        <%= link_to "directions", "https://maps.google.com/maps?q=#{m.address}" %>
+      <% end %>
+    </div>
+    <ul class=“list-group list-group-flush”>
+      <% @markets.each do |m| %>
+        <li class=“list-group-item”> <strong> Commonly sold: </strong> <%= m.description %></li>
+      <% end %>
+    </ul>
   </div>
 </div>
