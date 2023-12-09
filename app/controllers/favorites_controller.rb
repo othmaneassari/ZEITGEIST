@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
 
   def create
-    #@favorite = FavoriteMarket.new
+    @favorite = FavoriteMarket.new
   end
 
   def destroy

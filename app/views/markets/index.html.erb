@@ -8,5 +8,16 @@
       <%= link_to "directions", "https://maps.google.com/maps?q=#{market.address}" %>
       </div>
   </div>
-  <% end %>
 
+  <div>
+    <%= link_to market_reviews_path(market.id) , class: "nav-link" do %>
+      Check the reviews
+    <%end%>
+  </div>
+
+  <div>
+    <%= link_to new_market_review_path(market.id) , class: "nav-link" do %>
+      Leave a Review
+    <%end%>
+  </div>
+  <% end %>

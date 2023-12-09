@@ -12,11 +12,14 @@ end
 
 def create
   @review = Review.new(review_params)
-  #@review.user = current_user
+  @review.user = current_user
   @market = Market.find(params[:market_id])
   @review.market = @market
-  @review.save
-  redirect_to market_reviews_path(@market)
+  if @review.save
+    redirect_to market_reviews_path(@market)
+  else
+    render :new, status: :unprocessable_entity
+  end
 end
 
 

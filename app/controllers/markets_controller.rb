@@ -27,7 +27,6 @@ class MarketsController < ApplicationController
   def create
     @market = Market.new(market_params.except(:category))
     @market.user = current_user
-    #get the category that's coming from the form and assign that to a variable @category=Category.find
     pp "params[:category]"
     pp params[:category]
     @category = Category.find(market_params[:category])
