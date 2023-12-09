@@ -13,7 +13,7 @@
 require 'faker'
 User.destroy_all
 
-user_1 = User.new()
+user_1 = User.new(
   email: "Othmane.assari@lewagon.com",
   password: "123456",
   name: "Othmane",
@@ -45,37 +45,30 @@ user_3 = User.new(
   time_in_berlin: "2 years",
 )
 user_3.save!
-
 diverse_category = Category.new(
   name: "diverse"
 )
 diverse_category.save!
-
 afghan_category = Category.new(
   name: "afghan"
 )
 afghan_category.save!
-
 moroccan_category = Category.new(
   name: "moroccan"
 )
 moroccan_category.save!
-
 thai_category = Category.new(
   name: "thai"
 )
 thai_category.save!
-
 vietnamese_category = Category.new(
   name: "vietnamese"
 )
 vietnamese_category.save!
-
 street_category = Category.new(
   name: "street"
 )
 street_category.save!
-
 market = Market.new(
   name: "Mauerpark",
   address: "Eberswalder Str., 13355 Berlin Germany",
@@ -85,7 +78,6 @@ market = Market.new(
   user: user_1
 )
 market.save!
-
 market = Market.new(
   name: "Thai Park",
   address: "Wilmersdorf, Berlin Germany",
@@ -95,7 +87,6 @@ market = Market.new(
   user: user_3
 )
 market.save!
-
 market = Market.new(
   name: "Vietnamese",
   address: "Eberswalder Str., 13355 Berlin Germany",
@@ -105,7 +96,6 @@ market = Market.new(
   user: user_1
 )
 market.save!
-
 market = Market.new(
   name: "International Street Food Market",
   address: "Courtyard of the Kulturbrauerei, Prenzlauer Berg, Berlin Germany",
@@ -115,7 +105,6 @@ market = Market.new(
   user: user_2
 )
 market.save!
-
 market = Market.new(
   name: "Bite club",
   address: "Spree, Berlin Germany",
@@ -125,7 +114,6 @@ market = Market.new(
   user: user_3
 )
 market.save!
-
 market = Market.new(
   name: "Thaiwiese",
   address: "Preußenpark, Berlin Germany",
@@ -135,7 +123,6 @@ market = Market.new(
   user: user_1
 )
 market.save!
-
 market = Market.new(
   name: "Weekly market Fehrbellinerplatz",
   address: "Fehrbelliner Platz 4, 10707 Berlin, Germany",
@@ -151,11 +138,10 @@ market = Market.new(
   address: "Schönhauser Allee 38, 10435 Berlin, Germany",
   description: "Sunday afternoon outdoor market showcasing rotating food trucks and street-food stands. Pie food truck, local desserts",
   image_url: "https://directus.likealocalguide.com/assets/26f663ea-131e-494a-a8d7-3b4c76c42ae4",
-  category: street_category
+  category: street_category,
   user: user_3
 )
 market.save!
-
 market = Market.new(
   name: "Weekly market at Wittenbergplatz",
   address: "Wittenbergpl. 5, 10789 Berlin, Germany",
@@ -165,7 +151,6 @@ market = Market.new(
   user: user_2
 )
 market.save!
-
 market = Market.new(
   name: "Kabul bazar کابل بازار",
   address: "Vulkanstraße 12c, 10367 Berlin, Germany",
@@ -175,7 +160,6 @@ market = Market.new(
   user: user_1
   )
 market.save!
-
 market = Market.new(
   name: "Boxhagener Platz Food Market",
   address: "Gärtnerstraße 23-24, 10245 Berlin, Germany",
@@ -185,7 +169,6 @@ market = Market.new(
   user: user_1
   )
 market.save!
-
 market = Market.new(
   name: "Berlin Village Market at Neue Heimat",
   address: "Revaler Str. 99, 10245 Berlin, Germany",
@@ -225,7 +208,6 @@ market = Market.new(
   user: user_1
   )
 market.save!
-
 
 market = Market.new(
   name: "Treptower Park Riverside Promenade Food Stands",

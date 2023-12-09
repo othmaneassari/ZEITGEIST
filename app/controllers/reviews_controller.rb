@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  # skip_before_action :authenticate_user!, only: :index,
+  # has_one: Market
 
 def index
   @reviews = Review.all
