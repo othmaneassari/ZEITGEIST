@@ -10,3 +10,16 @@
   data-controller="map"
   data-map-markers-value="<%= @marker.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+
+<div>
+    <%= link_to market_reviews_path(@market) , class: "nav-link" do %>
+      Check the reviews
+    <%end%>
+  </div>
+
+  <div>
+    <%= link_to new_market_review_path(@market) , class: "nav-link" do %>
+      Leave a Review
+    <%end%>
+  </div>
