@@ -12,6 +12,9 @@
 
 require 'faker'
 User.destroy_all
+Category.destroy_all
+Market.destroy_all
+Review.destroy_all
 
 user_1 = User.new(
   email: "Othmane.assari@lewagon.com",
