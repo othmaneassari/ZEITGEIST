@@ -21,7 +21,7 @@ class MarketsController < ApplicationController
 
   def new
     @market = Market.new
-    @categories = Category.all
+    @categories = Category.distinct(:name)
   end
 
   def create
@@ -33,7 +33,7 @@ class MarketsController < ApplicationController
     pp Category.find(market_params[:category])
     @market.category = @category
     @market.save!
-    redirect_to market_path(@market)
+    redirect_to markets_path
   end
 
 
