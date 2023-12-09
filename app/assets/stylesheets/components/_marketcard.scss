@@ -20,3 +20,49 @@
 .img src{
   height: auto;
 }
+
+
+.createnew{
+  border-radius: 18px;
+  background: rgba(247, 247, 247, 0.70);
+  height: auto;
+  font-family: inter;
+  box-shadow: inset;
+  flex-shrink: 0;
+  padding: 10px, 10px;
+  display: flexbox;
+  margin: 10px;
+
+
+}
+
+.spacing{
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.aligning{
+  padding-top: 20px;
+}
+
+
+.paddingform{
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+.returnbtn{
+ text-align: center;
+ padding: 10px;
+}
+
+
+.font{
+  padding-top: 20px;
+  font-family: inter;
+  text-align: center;
+  text-shadow: #3d3d3d;
+}
