@@ -211,7 +211,11 @@ html {
 
 
   .btn {
-    height: 46px;
+    height: auto;
+    width: 30%;
     flex-shrink: 0;
     margin-top: 45px;
+    background-color: rgba(234, 231, 216, 0.9);
+    box-shadow: 0 17px 50px 0 rgba(0,0,0,0.23);
+    text-align: center;
   }
