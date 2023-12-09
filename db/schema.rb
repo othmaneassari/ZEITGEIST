@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_02_191502) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_06_023759) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -74,6 +74,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_191502) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.string "image_url"
+    t.string "string"
     t.index ["category_id"], name: "index_markets_on_category_id"
     t.index ["user_id"], name: "index_markets_on_user_id"
   end
@@ -93,7 +95,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_191502) do
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["market_id"], name: "index_reviews_on_market_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -123,4 +127,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_02_191502) do
   add_foreign_key "markets_ingredients", "ingredients"
   add_foreign_key "markets_ingredients", "markets"
   add_foreign_key "reviews", "markets"
+  add_foreign_key "reviews", "users"
 end

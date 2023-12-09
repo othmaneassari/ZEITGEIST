@@ -8,13 +8,15 @@
     <i class="fa-solid fa-envelope"></i>
   </div>
   <div>
-    <i class="fa-solid fa-plus"></i>
+    <%= link_to new_market_path , class: "nav-link" do %>
+      <i class="fa-solid fa-plus"></i>
+    <%end%>
   </div>
   <div>
 
 
-    <%# <% link_to user_path , class: "nav-link" do %>
-    <i class="fa-solid fa-user"></i>
+
+
   <% if user_signed_in?%>
     <%= link_to user_path(current_user) , class: "nav-link" do %>
       <i class="fa-solid fa-user"></i>

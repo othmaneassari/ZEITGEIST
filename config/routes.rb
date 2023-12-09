@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :categories
   resources :users
-  resources :markets
+  resources :markets do
+    resources :reviews, only: [:index, :new, :create]
+  end
   resources :favorites
-
 end
