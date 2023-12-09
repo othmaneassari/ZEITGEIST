@@ -1,20 +1,30 @@
-<h2>Create a market</h2>
-<%= simple_form_for [@market] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :category, 'Select a category' %>
-  <%= f.input :category, as: :select, collection:@categories, prompt: 'Select a category' %>
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
-  <%= f.submit %>
-<% end %>
 
-<div>
-    <%= link_to markets_path , class: "nav-link" do %>
-      Go back to Markets Page
+<div class="createnew">
+  <h2 class="font">Create a market</h2>
+  <%= simple_form_for [@market] do |f| %>
+    <div class="aligning">
+      <%= f.label :name %>
+    </div>
+
+    <div class="paddingform">
+      <%= f.text_field :name %>
+      <%= f.label :category, 'Select a category' %>
+      <%= f.input :category, as: :select, collection:@categories, prompt: 'Select a category' %>
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+      <%= f.label :image_url %>
+      <%= f.text_field :image_url %>
+
+    <div class="spacing">
+      <%= f.button :submit, "Add market", class: "btn" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="returnbtn">
+    <%= link_to markets_path , class: "btn" do %>
+      Back to Markets
     <%end%>
   </div>
