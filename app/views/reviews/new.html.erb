@@ -1,14 +1,16 @@
-<h2>Create review</h2>
+<div class="createnew">
 <h1>Rate your experience</h2>
 <%= simple_form_for [@market, @review] do |f| %>
-  <h3>Location</h3>
+  <h3>Location:</h3>
   <p> <%=@market.name%> - <%=@market.address%> </p>
   <h3>Rating (1-10)</h3>
+  <div class="padaform">
   <div class="rating">
     <% (1..10).each do |i| %>
       <%= f.radio_button :rating, i %>
       <%= label_tag "rating_#{i}", "#{i}", class: 'rating-label' %>
     <% end %>
+  </div>
   </div>
   <h3>Comment</h3>
   <%= f.text_field :comment %>
