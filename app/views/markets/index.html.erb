@@ -1,19 +1,23 @@
-  <% @markets.each do |market| %>
-  <div class="marketcard">
-    <div class="marketimage">
-       <%= image_tag(market.image_url) %>
-        <h5> <%= market.name %></h5>
-        <p> <%= market.description %></p>
-        <p> <%= market.address %></p>
-        <div class="paddedarea">
-      <%= link_to " Get directions", "https://maps.google.com/maps?q=#{market.address}", :class=>"btn" %>
-      <%= link_to new_market_review_path(market.id) , class: "btn-ghost" do %>
+<div class="container">
+  <div class="row">
+<div class="column">
+  <div class="card" style="width: 20rem;">
+<div class="card-container">
+
+  <div class="card-body">
+    <% @markets.each do |market|%>
+     <img class="card-img-top"><%= image_tag(market.image_url)%>
+    <h5 class="card-title"><%= market.name%></h5>
+    <h6 class="card-subtitle mb-2 text-muted"> <%=market.description %></h6>
+    <p class="card-text"> <%= market.address %></p>
+    <%= link_to "Get directions", "https://maps.google.com/maps?q=#{market.address}" %>
+    <%= link_to new_market_review_path(market.id) , class: "btn-ghost" do %>
       Leave a Review
-    <%end%>
-    <%= link_to market_reviews_path(market.id) , class: "btn-ghost" do %>
-      Check the reviews
-    <%end%>
-    </div>
+    <% end %>
+    <% end %>
       </div>
+</div>
+</div>
+
+</div>
   </div>
-  <% end %>
