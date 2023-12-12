@@ -7,10 +7,10 @@
         <p> <%= market.address %></p>
         <div class="paddedarea">
       <%= link_to " Get directions", "https://maps.google.com/maps?q=#{market.address}", :class=>"btn" %>
-      <%= link_to new_market_review_path(market.id) , class: "btn" do %>
+      <%= link_to new_market_review_path(market.id) , class: "btn-ghost" do %>
       Leave a Review
     <%end%>
-    <%= link_to market_reviews_path(market.id) , class: "btn" do %>
+    <%= link_to market_reviews_path(market.id) , class: "btn-ghost" do %>
       Check the reviews
     <%end%>
     </div>

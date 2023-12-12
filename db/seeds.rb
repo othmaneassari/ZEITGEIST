@@ -99,15 +99,7 @@ market = Market.new(
   user: user_1
 )
 market.save!
-market = Market.new(
-  name: "International Street Food Market",
-  address: "Courtyard of the Kulturbrauerei, Prenzlauer Berg, Berlin Germany",
-  description: "International street food, bratwurst, curry-wurst, pretzels, tacos, Peruvian ceviche, Moroccan tajine, manti dumplings from Central Asia, freshly baked chimney cakes",
-  category: street_category,
-  image_url: "https://www.berlin.de/binaries/asset/image_assets/4409526/source/1673516849/1000x500/",
-  user: user_2
-)
-market.save!
+
 market = Market.new(
   name: "Bite club",
   address: "Spree, Berlin Germany",
@@ -178,16 +170,6 @@ market = Market.new(
   description: "Sunday Market featuring international street-food creations, crepes, currywurst, grilled fish, smoked meat and sausages, homemade jams",
   image_url: "https://berlijn-blog.nl/wp-content/uploads/2014/08/20140809-P1020679-BerlijnBlog-Berlin-Village-Market.jpg",
   category: street_category,
-  user: user_1
-  )
-market.save!
-
-market = Market.new(
-  name: "Green Market",
-  address: "Beer garden- Zum Anleger, Kiehnwerderallee 2 12437 Berlin, Germany",
-  description: "Weekly Market featuring all vegan seasonal foods, street-food creations, Vietnamese bánh xèo coconut pancakes, tofu burgers, natural waffles, non-dairy ice cream",
-  image_url: "https://vegansandfriends.com/wp-content/uploads/2018/11/The-Green-Market-2018-Blick-Richtung-Eingang.jpg",
-  category: diverse_category,
   user: user_1
   )
 market.save!
