@@ -1,14 +1,21 @@
-<h1> Profile </h1>
-<div class="createnew">
-<%#= @user.picture_url %>
-<%# <%= image_tag(@user.picture_url)%>
-<div class="font">
- ` <h2> <strong> About me </strong> </h2>
-  <p><%= @user.biography %></p>
-  <h2><%= @user.name %></h2>
-  <p><%= @user.description %></p>
-  <p>Time in Berlin:<%= @user.time_in_berlin%> </p>
-  <p>Reviews starred: </p>
-    </div>`
-  </div>
+<div class="userprofile d-flex justify-content-around">
+  <h1> Profile </h1>
 </div>
+  <div class="imgprofile d-flex justify-content-around">
+    <%= cl_image_tag("olne3u55ly2lfqgfhv8y", width: 300, height: 200, crop: :fit)%>
+  </div>
+<div class="container">
+<h2> ABOUT ME </h2>
+    <p>Hi, my name is Othmane, I am a culinary enthusiast eager to discover the many
+    different dishes that Berlin has to offer!</p>
+    <h2>Othmane</h2>
+    <p>Developer in the making, Market Finance graduate</p>
+    <p>Time in Berlin: <strong>1 year</strong> </p>
+    <p>Reviews starred: </p>
+</div>
+
+<%# <%= @user.biography %>
+<%# <%= @user.name %>
+<%# <%= @user.description %>
+<%# <p>Time in Berlin:</p> <%=@user.time_in_berlin%>
+<%# <p>Reviews starred: </p> <%=@user.reviews.count %>
