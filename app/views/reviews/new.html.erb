@@ -1,12 +1,12 @@
 <div class="coloringfonts">
-<div class="createnew">
+<div class="reviewnew">
 <h1>Rate your experience</h2>
 <%= simple_form_for [@market, @review] do |f| %>
   <h3 >Location:</h3>
   <p> <%=@market.name%> - <%=@market.address%> </p>
   <h3>Rating (1-10)</h3>
   <div class="padthis">
-  <div class="rating">
+  <div class="rating style p-3">
     <% (1..10).each do |i| %>
       <%= f.radio_button :rating, i %>
       <%= label_tag "rating_#{i}", "#{i}", class: 'rating-label' %>
