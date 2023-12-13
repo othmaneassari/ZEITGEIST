@@ -136,15 +136,11 @@ h1{
  }
 
 
- .card img{
-  width: 191px;
-  height: 330px;
-  align-content: center;
- }
+
 
 
  .container {
-  background: rgba(247, 247, 247, 0);
+  background-color: rgba(247, 247, 247, 0.292);
   height: 550px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -181,10 +177,6 @@ body {
   border-radius: 18px;
 }
 
-.card img  {
-  height: 191px;
-  width: 330px;
-}
 
 @media screen and (max-width: 600px) {
   .column {
@@ -192,4 +184,11 @@ body {
     display: block;
     margin-bottom: 20px;
   }
+}
+
+
+.responsive-image{
+  width: 100%;
+  object-fit: cover;
+  height: 191px;
 }
