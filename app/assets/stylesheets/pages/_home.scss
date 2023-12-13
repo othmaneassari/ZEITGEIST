@@ -225,13 +225,15 @@ html {
   }
 
   .container {
+    margin-top: 0px;
+    margin-bottom: 0px;
     border: 3px solid #ccc;
     width: 26em;
     font-size: 14px;
     background-color: rgba(40, 40, 40, 0.5);
     border-radius: 18px;
     p{font-family: inter;
-      color: #000;
+      color: #fff8f8;
      }
   }
 
@@ -272,4 +274,18 @@ html {
 
   .btn-ghost:hover {
     opacity: 3;
+  }
+
+  .reviewnew {
+    border-radius: 18px;
+    background: rgba(48, 48, 48, 0.7);
+    height: auto;
+    font-family: inter;
+    box-shadow: inset;
+    flex-shrink: 0;
+    padding: 10px, 10px;
+    display: flexbox;
+    margin: 0px;
+    color: white;
+
   }
