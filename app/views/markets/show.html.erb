@@ -1,24 +1,22 @@
-<div class="container" style="height:  width:60%" >
+<div class="container">
   <h1><%= @market.name %></h1>
   <p><%= @market.category.name %></p>
   <p><%= @market.address%></p>
   <p><%= @market.description%></p>
+  <div
+    style="width: 100%; height: 250px;"
+    data-controller="map"
+    data-map-markers-value="<%= @marker.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+  >
+    <!-- this is an empty div... mapbox fills it with magic! -->
+  </div>
 </div>
 
-<div
-  style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @marker.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
-
-<div>
+<div class="w-full mx-5 d-flex justify-content-between">
   <%= link_to market_reviews_path(@market) , class: "nav-link" do %>
     Check the reviews
   <%end%>
-</div>
-
-<div>
   <%= link_to new_market_review_path(@market) , class: "nav-link" do %>
     Leave a Review
   <%end%>
