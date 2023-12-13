@@ -1,30 +1,36 @@
 
 <div class="createnew">
   <h2 class="font">Create a market</h2>
-  <%= simple_form_for [@market] do |f| %>
-    <div class="aligning">
+    <%= simple_form_for [@market] do |f| %>
+    <div class="aligning d-flex mx-3">
       <%= f.label :name %>
+      <%= f.text_field :name %>
     </div>
 
     <div class="paddingform">
-      <%= f.text_field :name %>
-      <%= f.label :category, 'Select a category' %>
-      <%= f.input :category, as: :select, collection:@categories, prompt: 'Select a category' %>
+      <div class="d-flex mx-3">
+      <%= f.input :category, as: :select, collection:@categories, prompt: 'Select a category', class: "d-flex" %>
+      </div>
+       <div class="d-flex pd-3">
       <%= f.label :address %>
+
       <%= f.text_field :address %>
+      </div>
+       <div class="d-flex pd-3">
       <%= f.label :description %>
       <%= f.text_field :description %>
+      </div>
+       <div class="d-flex pd-3">
       <%= f.label :image_url %>
       <%= f.text_field :image_url %>
-
-    <div class="spacing">
-      <%= f.button :submit, "Add market", class: "btn-ghost" %>
+      </div>
     </div>
-  <% end %>
-</div>
+          <div class="d-flex justify-content-between pb-3">
+            <%= f.button :submit, "Add market", class: "btn-ghost" %>
+            <%= link_to markets_path , class: "btn-ghost" do %>
+            Back to Markets
+          <%end%>
 
-<div class="returnbtn">
-    <%= link_to markets_path , class: "btn-ghost" do %>
-      Back to Markets
-    <%end%>
-  </div>
+      </div>
+   <% end %>
+</div>
