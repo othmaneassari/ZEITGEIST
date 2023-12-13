@@ -23,10 +23,10 @@
       <%= f.text_field :image_url, class: 'form-control' %>
     </div>
     <div class="d-flex justify-content-between">
-      <%= f.button :submit, "Add market", class: "btn-ghost" %>
       <%= link_to markets_path , class: "btn-ghost" do %>
         Back to Markets
       <%end%>
+      <%= f.button :submit, "Add market", class: "btn-ghost" %>
     </div>
   <% end %> <!--end simple form -->
 </div>
