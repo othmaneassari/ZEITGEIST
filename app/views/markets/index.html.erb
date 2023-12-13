@@ -1,23 +1,22 @@
 <div class="container">
   <div class="row">
-<div class="column">
-  <div class="card" style="width: 20rem;">
-<div class="card-container">
-
-  <div class="card-body">
-    <% @markets.each do |market|%>
-     <img class="card-img-top"><%= image_tag(market.image_url)%>
-    <h5 class="card-title"><%= market.name%></h5>
-    <h6 class="card-subtitle mb-2 text-muted"> <%=market.description %></h6>
-    <p class="card-text"> <%= market.address %></p>
-    <%= link_to "Get directions", "https://maps.google.com/maps?q=#{market.address}" %>
-    <%= link_to new_market_review_path(market.id) , class: "btn-ghost" do %>
-      Leave a Review
-    <% end %>
-    <% end %>
-      </div>
-</div>
-</div>
-
-</div>
+    <div class="column">
+      <% @markets.each do |market|%>
+        <div class="card" style="width: 20rem; margin-top: 12px; margin-bottom: 12px;">
+          <div class="card-container">
+            <div class="card-body">
+              <%= image_tag(market.image_url, class: "card-img-top responsive-image") %>
+              <h5 class="card-title"><%= market.name%></h5>
+              <h6 class="card-subtitle mb-2 text-muted"> <%=market.description %></h6>
+              <p class="card-text"> <%= market.address %></p>
+              <%= link_to "Get directions", "https://maps.google.com/maps?q=#{market.address}" %>
+              <%= link_to new_market_review_path(market.id) , class: "btn-ghost" do %>
+                Leave a Review
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
+</div>
