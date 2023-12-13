@@ -9,14 +9,11 @@
   margin-top: 25px;
 }
 
-
 .marketimage{
   border-radius: 18px;
   height: 200px;
   width: 200px;
 }
-
-
 
 .createnew{
   border-radius: 18px;
@@ -28,8 +25,6 @@
   padding: 10px, 10px;
   display: flexbox;
   margin: 10px;
-
-
 }
 
 .spacing{
@@ -41,7 +36,6 @@
   padding-top: 20px;
 }
 
-
 .paddingform{
   margin-bottom: 10px;
   padding-top: 10px;
@@ -52,12 +46,10 @@
   text-shadow: 0 0 black;
 }
 
-
 .returnbtn{
- text-align: center;
- padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
-
 
 .font{
   padding-top: 20px;
@@ -66,12 +58,10 @@
   text-shadow: #3d3d3d;
 }
 
-
 .paddedarea{
   padding-bottom: 15px;
   text-align: center;
 }
-
 
 .btnsmyl{
   background-color: rgba(255, 254, 205, 0.664);
@@ -82,36 +72,18 @@
   font-family: inter;
 }
 
-
 .padaform{
- padding-inline-start: 50px;
+  padding-inline-start: 50px;
 }
-
 
 h3{
   padding-left: 25px;
   margin-bottom: 10px;
 }
 
-
 h1{
   text-align: center;
 }
-
-
-#market_address{
-  margin-bottom: 20px;
-}
-
-#market_description{
-  margin-bottom: 20px;
-}
-
-
-#market_image_url{
-  margin-bottom: 20px;
-}
-
 
 .coloringfonts{
   color: #3d3d3d;
@@ -124,22 +96,20 @@ h1{
   padding-bottom: 20px;
 }
 
+.form-group {
+  margin-bottom: 12px;
+}
 
 .padthis{
   margin-top: 30px;
 }
 
-
 .scrollbar{
   max-height: 400px;
   overflow-y: auto;
- }
+}
 
-
-
-
-
- .container {
+.container {
   background-color: rgba(247, 247, 247, 0.292);
   height: 550px;
   margin-top: 20px;
@@ -148,16 +118,13 @@ h1{
   overflow-x: auto;
   scroll-behavior: smooth;
   justify-content: center;
+}
 
- }
-
-
- .card{
+.card{
   justify-content: center !important;
- }
+}
 
-
- * {
+* {
   box-sizing: border-box;
 }
 
@@ -166,7 +133,7 @@ body {
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-.row {margin: 0 -5px;}
+.row { margin: 0 -5px; }
 
 .card {
   justify-content: center;
@@ -177,7 +144,6 @@ body {
   border-radius: 18px;
 }
 
-
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -185,7 +151,6 @@ body {
     margin-bottom: 20px;
   }
 }
-
 
 .responsive-image{
   width: 100%;
