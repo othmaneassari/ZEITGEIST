@@ -5,17 +5,17 @@
     <%= cl_image_tag("olne3u55ly2lfqgfhv8y", width: 300, height: 200, crop: :fit)%>
   </div>
 <div class="container">
-<h2> ABOUT ME </h2>
-    <p>Hi, my name is Othmane, I am a culinary enthusiast eager to discover the many
+  <h2> ABOUT ME </h2>
+    <p><%= @user.biography %></p>
+    <h2><%= @user.name %></h2>
+    <p><%= @user.description %></p>
+    <p>Time in Berlin:<%=@user.time_in_berlin%></p>
+    <p>Reviews starred:<%=@user.reviews.count %></p>
+</div>
+
+<%# <p>Hi, my name is Othmane, I am a culinary enthusiast eager to discover the many
     different dishes that Berlin has to offer!</p>
     <h2>Othmane</h2>
     <p>Developer in the making, Market Finance graduate</p>
     <p>Time in Berlin: <strong>1 year</strong> </p>
-    <p>Reviews starred: </p>
-</div>
-
-<%# <%= @user.biography %>
-<%# <%= @user.name %>
-<%# <%= @user.description %>
-<%# <p>Time in Berlin:</p> <%=@user.time_in_berlin%>
-<%# <p>Reviews starred: </p> <%=@user.reviews.count %>
+    <p>Reviews starred: </p> %>
