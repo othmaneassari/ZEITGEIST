@@ -13,8 +13,12 @@
     <% end %>
   </div>
   </div>
-  <h3 class="padthis">Comments about your experience</h3>
-  <%= f.text_field :comment %>
+  <div id="comment">
+    <h4>Comments about your experience</h4>
+  </div>
+    <div id="reviewcomment">
+      <%= f.text_field :comment %>
+    </div>
   <div class="padding">
   <%= f.submit "Submit Review", class: "btn-ghost" %>
 <% end %>

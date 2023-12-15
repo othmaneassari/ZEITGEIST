@@ -8,7 +8,7 @@
               <%= image_tag(market.image_url, class: "card-img-top responsive-image") %>
               <h5 class="card-title"><%= market.name%></h5>
               <h6 class="card-subtitle mb-2 text-muted"> <%=market.description %></h6>
-              <p class="card-text"> <%= market.address %></p>
+              <p class="card-text">  <div id="descriptioncolor"> <%= market.address %>  </div></p>
               <%= link_to "Get directions", "https://maps.google.com/maps?q=#{market.address}" %>
               <%= link_to new_market_review_path(market.id) , class: "btn-ghost" do %>
                 Leave a Review
