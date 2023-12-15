@@ -5,15 +5,16 @@
 <h1 class="home_title"> <strong> ZEITGEIST </strong> </h1>
   <div class="cards mt-3">
     <% @market.reviews.each do |review| %>
-      <h2><%=review.comment%></h2>
-      <p><%=review.rating%></p>
+      <div id="reviewcomments">
+        <h2><%=review.comment%></h2>
+        <p><%=review.rating%></p>
+      </div>
     <% end %>
   </div>
+</div>
 
-
-    <div>
+    <div id="reviewbacktomarket">
         <%= link_to markets_path(@market) , class: "btn-ghost" do %>
           Go back to the Market
         <%end%>
-      </div>
-  </div>
+    </div>
