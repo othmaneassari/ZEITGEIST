@@ -1,36 +1,28 @@
-
-
 <main>
+  <h1 class="home_title">
+    <strong> ZEITGEIST </strong>
+  </h1>
 
+  <div class="main-contain" id="rectangle">
+    <div class="row justify-content-center">
+      <h2 class="slogan"> For the love of Cultural diversity </h2>
 
-<h1 class="home_title"> <strong> ZEITGEIST </strong> </h1>
-
-<div class="main-contain" id="rectangle">
-
-
-
-
-<div class="row justify-content-center">
-
-  <h2 class="slogan"> For the love of Cultural diversity </h2>
-    <div class="col-sm-8 my-3">
-      <%= form_with url: markets_path, method: :get, class: "" do %>
-        <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "let's find an open air market in Berlin..."
+      <div class="col-sm-8 my-3">
+        <%= form_with url: markets_path, method: :get, class: "" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "let's find an open air market in Berlin..."
           %>
-    </div>
+        <% end %>
+      </div>
 
-
-
-    <div style="width: 80%; height: 350px; border-radius: 18px;"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-      <%= submit_tag "Search", name: "", class: "btn-ghost" %>
+      <div style="width: 80%; height: 350px; border-radius: 18px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+        <%= submit_tag "Search", name: "", class: "btn-ghost" %>
+      </div>
     </div>
   </div>
-<% end %>
-</div>
 </main>
