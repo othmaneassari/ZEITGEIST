@@ -178,7 +178,7 @@ market = Market.new(
   name: "Turkish Market- Neuköllner Wochenmärkte",
   address: "Maybachufer Kreuzberg, 12047 Berlin Germany",
   description: "Weekly Market offering Turkish traditional foods, fresh fruit and vegetables, stuffed vine leaves, goat cheese, fresh fish, sweet pastries, flowers, olive wood products",
-  image_url: "http://www.urban75.org/blog/images/turkish-market-maybachufer-berlin-neukolln-03.jpg",
+  image_url: "https://blog.berlin.bard.edu/wp-content/uploads/2013/08/Berlin-Turkish-Market.jpg",
   category: diverse_category,
   user: user_1
   )
